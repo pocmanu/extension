@@ -1,0 +1,20 @@
+{
+"manifest_version": 2,
+"name" :"My own web synchronization",
+"version" :"1.0",
+"description" :"Test Manu",
+"permissions": ["tabs", "background", "bookmarks", "notifications"],
+"web_accessible_resources": [
+    "script/myscript.js",
+	"script/firebase.js"
+],
+"content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'",
+"background" : {
+    "page":"background.html"
+},
+"browser_action" :
+	{
+		"default_icon" : "icone.png",
+		"default_popup" :"dire_bonjour.html"
+	}
+}

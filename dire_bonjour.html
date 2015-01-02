@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="row.css">
+</head>
+
+<script type="text/javascript" src="https://cdn.firebase.com/js/client/1.1.2/firebase.js"></script>
+<script type="text/javascript" src="scripts/myscript.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+
+<template id="session-row">
+  <div class="w-container row">
+      <div class="w-row row" id="session">
+        <div class="w-col w-col-2">
+          <img class="image" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+        </div>
+        <div class="w-col w-col-4 session-col">
+          <div class="session">session name</div>
+        </div>
+        <div class="w-col w-col-3">
+          <a class="button restore" href="#">Restore</a>
+        </div>
+        <div class="w-col w-col-3">
+          <a class="button save" href="#">Save</a>
+        </div>
+      </div>
+    </div>
+    <br/>
+</template>
+
+<body>
+	<div id="auth" style="{display:none}">
+  	<form name="authentication" id="authentication" method="post">
+  		<label for="login">Login : </label><input type="text" id="login"/><br/>
+  		<label for="password">Password : </label><input type="password" id="password"/><br/>
+  		<input id="submit" type="submit" value="Send"/>
+  	</form>
+	</div>
+	<div id="new session">
+  	<form name="create new session" id="create new session" style="{display:none}">
+  		<label for="session name">Create session : </label><input type="text" id="session name"/>
+  		<input id="create session" type="submit" value="Create"/>
+  	</form>
+	</div>
+	<div id="sessionContainer"></div>
+</body>
+</html>
